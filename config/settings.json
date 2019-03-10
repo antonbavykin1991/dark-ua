@@ -18,10 +18,12 @@
     "menuLocation": "side",
     "footerHtml": "&lt;h4 class=&quot;text-center&quot;&gt;Powered by expressCart&lt;/h4&gt;",
     "googleAnalytics": "",
-    "customCss": ".footer{padding-top: 5px;}",
+    "customCss": ".footer{padding-top:5px}",
     "currencySymbol": "£",
     "paymentGateway": "stripe",
     "databaseConnectionString": "mongodb://127.0.0.1:27017/expresscart",
     "theme": "Cloth",
-    "trackStock": false
+    "trackStock": false,
+    "env": ".min",
+    "themeViews": "../views/themes/Cloth/"
 }

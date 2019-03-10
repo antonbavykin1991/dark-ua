@@ -425,7 +425,7 @@ router.post('/admin/file/upload', common.restrict, common.checkAccess, upload.si
 
         // Get the mime type of the file
         const mimeType = mime.lookup(file.originalname);
-        
+
         // Check for allowed mime type and file size
         if(!common.allowedMimeType.includes(mimeType) || file.size > common.fileSizeLimit){
             // Remove temp file

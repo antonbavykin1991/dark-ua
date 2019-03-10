@@ -45,15 +45,13 @@
                             <a id="createCustomerAccount" class="btn btn-success pull-right">Create account</a>
                         </div>
                         {{/unless}}
+
+                        {{#if session.customer}}
+                          <button type="submit">
+                            Process payment
+                          </button>
+                        {{/if}}
                     </form>
-                    {{#if session.customer}}
-                    {{#ifCond config.paymentGateway '==' 'stripe'}}
-                        {{> partials/payments/stripe}}
-                    {{/ifCond}}
-                    {{#ifCond config.paymentGateway '==' 'authorizenet'}}
-                        {{> partials/payments/authorizenet}}
-                    {{/ifCond}}
-                    {{/if}}
                 </div>
             </div>
         </div>
